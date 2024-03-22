@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: horizon;
+  src: url(../assets/fonts/Horizon.otf);
+}
+@font-face {
+  font-family: introrust;
+  src: url(../assets/fonts/introrust.ttf);
+}
+@font-face {
+  font-family: proxima;
+  src: url(../assets/fonts/Fontspring-DEMO-proximanovaexcn-regular.otf);
+}
+@font-face {
+  font-family: glacial;
+  src: url(../assets/fonts/GlacialIndifference-Regular.otf);
+}
+@font-face {
+  font-family: roboto;
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+:root {
+  --light: #f4f7ed;
+  --deep-blue: #2b3752;
+  --light-green: #86ee60;
+  --deep-green: #2e6e65;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: Horizon;
+
+  font-size: 32pt;
+}
+
+h2 {
+  font-family: introrust;
+  font-size: 32pt;
+}
+
+button, p, a, span{
+  font-family: roboto;
+  font-size: 16pt;
+}
+
+ul{
+  list-style: none;
+}
+
+
+
+img {
+  width: 100%;
+}
+
+
+
+
+
+/* Navbar start  */
+
+.my-nav {
+  height: 100px;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 159px;
+  margin: auto;
+  z-index: 100000;
+}
+
+.my-nav > .nav-header {
+  display: inline;
+}
+
+.my-nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.my-nav > .nav-btn {
+  display: none;
+}
+
+.my-nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.my-nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #503172 !important;
+  font-weight: 500;
+}
+
+.my-nav > .nav-links > a:hover {
+  color: black !important;
+}
+
+.my-nav > #nav-check {
+  display: none;
+}
+
+.logo {
+  width: 190px;
+}
+
+@media (max-width: 600px) {
+  .my-nav {
+    padding: 0 10px;
+  }
+  .my-nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+  }
+  .my-nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    cursor: pointer;
+  }
+
+  #nav-check:checked ~ .nav-btn > label span:first-child {
+    rotate: 45deg;
+    transform-origin: top left;
+    margin-left: 2px;
+  }
+  #nav-check:checked ~ .nav-btn > label span:last-child {
+    rotate: -45deg;
+    margin-top: -13px;
+    transform-origin: bottom right;
+  }
+  #nav-check:checked ~ .nav-btn > label span:nth-child(2) {
+    display: none !important;
+  }
+
+  #nav-check:checked ~ .logo {
+    display: none !important;
+  }
+
+  .my-nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #000000;
+  }
+  .my-nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 100px;
+    left: 0px;
+    padding: 10px 20px;
+  }
+
+  .my-nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .my-nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .my-nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+/* Navbar end  */
+
+.container {
+  width: 80vw;
+  margin: auto;
+}
+
+/* Hero Start  */
+
+#Home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/images/business-people-are-brainstorming.jpeg);
+  /* background: linear-gradient(to right, rgba(199, 66, 239, 0.8), rgba(132, 0, 255, 0.8)), url("../images/hero.jpg"); */
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+#Home .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.homeContent {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.homeContent button{
+  border: none;
+  outline: none;
+  background: var(--light-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 32px;
+  /* font-size: 23px; */
+  color: var(--light);
+}
+
+.homeContent h1{
+  color: var(--light);
+  font-size: 42pt;
+  max-width: 900px;
+}
+
+.homeContent button img{
+  width: 30px;
+}
+
+/* Hero end */
+
+
+
+/* Programme Start  */
+
+#Programme{
+  padding: 200px 0;
+}
+
+#Programme i{
+  font-size: 20px;
+}
+
+.programmeWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.programmeImage{
+  border-radius: 35px;
+  max-height: 800px;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.programmeContent{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.programmeContent h2{
+  color: var(--deep-green);
+}
+
+.programmeContent ul li{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 32px;
+}
+
+/* Programme End */
+
+
+/* Specialist Start */
+
+#Specialist{
+  margin-bottom: 100px;
+}
+
+
+.specialistWrapper{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/christina-wocintechchat-com-glRqyWJgUeY-unsplash.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 900px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 100px;
+}
+
+.specialistHeading{
+  text-align: center;
+}
+
+.specialistHeading h2{
+  font-size: 36pt;
+  font-family: introrust;
+  color: var(--light-green);
+  letter-spacing: 4px;
+}
+.specialistHeading h3{
+  font-size: 36pt;
+  font-family: proxima;
+  color: var(--light);
+  letter-spacing: 4px;
+}
+
+.specialistBoxes{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.box{
+  background: var(--deep-blue);
+  color: var(--light-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 35px 40px;
+  border-radius: 20px;
+}
+
+.box h4{
+  font-size: 16pt;
+  font-family: roboto;
+  margin-bottom: 10px;
+}
+
+.box p{
+  font-weight: 100;
+}
+
+/* Specialist End */
+
+
+
+
+/* Application Start */
+
+#Application{
+  padding: 100px 0;
+}
+
+#Application i{
+  font-size: 20px;
+}
+
+#Application .programmeWrapper{
+  gap: 100px;
+}
+
+
+/* Application End */
