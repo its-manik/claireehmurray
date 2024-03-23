@@ -127,13 +127,13 @@ img {
 
 @media (max-width: 992px) {
   .my-nav {
-    padding: 0 10px;
+    padding: 0 20px;
   }
   .my-nav > .nav-btn {
     display: inline-block;
     position: absolute;
-    right: 20px;
-    top: 25px;
+    right: 30px;
+    top: 18px;
   }
   .my-nav > .nav-btn > label {
     display: inline-block;
@@ -145,7 +145,7 @@ img {
 
   
 .my-nav > .nav-btn > label > img{
-  width: 40px !important;
+  width: 50px !important;
   height: 40px;
 }
 
@@ -504,9 +504,6 @@ footer{
   .container{
     width: 95vw;
   }
-  .my-nav{
-    padding: 0 50px
-  }
 }
 @media screen and (max-width: 1200px) {
   #Specialist{
@@ -526,6 +523,10 @@ footer{
 }
 
 @media screen and (max-width: 992px) {
+
+  .homeContent h1{
+    font-size: 35pt;
+  }
 
   .programmeContent h2, .applicationContent h2{
     font-size: 30pt;
@@ -555,9 +556,6 @@ footer{
   .container{
     width: 95vw;
   }
-  .my-nav{
-    padding: 0 10px
-  }
 
   .contact {
     flex-direction: column;
@@ -579,6 +577,18 @@ footer{
 
 
 @media screen and (max-width: 600px) {
+  .homeContent h1{
+    font-size: 25pt;
+  }
+  .specialistHeading{
+    padding: 20px 0px;
+  }
+  .specialistHeading h2{
+    font-size: 35pt;
+  }
+  .specialistHeading h3{
+    font-size: 30pt;
+  }
   .specialistWrapper{
     padding: 30px;
   }
